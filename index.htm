@@ -62,10 +62,11 @@
                     video.play();
                 });
 		if (mediaDevices && mediaDevices.enumerateDevices) {
-                mediaDevices.enumerateDevices().then(function(devices) {
-                    devices.forEach(function(device) {
-                        console.log(device);
-                    });
+                	mediaDevices.enumerateDevices().then(function(devices) {
+                    		devices.forEach(function(device) {
+                        		console.log(device);
+				}
+                    	});
 		}
             }
 	});

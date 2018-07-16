@@ -61,7 +61,12 @@
                     video.src = window.URL.createObjectURL(stream);
                     video.play();
                 });
-		console.log(navigator.mediaDevices);
+		if (mediaDevices && mediaDevices.enumerateDevices) {
+                mediaDevices.enumerateDevices().then(function(devices) {
+                    devices.forEach(function(device) {
+                        console.log(device);
+                    });
+		}
             }
 	});
 

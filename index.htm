@@ -58,13 +58,13 @@
             if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                 // Not adding `{ audio: true }` since we only want video now
                 navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
-                    video.src = window.URL.createObjectURL(stream);
+                    video.src = window.HTMLMediaElement.srcObject(stream);
                     video.play();
                 });
 		if (navigator.mediaDevices && navigator.mediaDevices.enumerateDevices) {
                 	navigator.mediaDevices.enumerateDevices().then(function(devices) {
                     		devices.forEach(function(device) {
-                        		console.log(device);
+                        		console.log(device.kind);
 				});
                     	});
 		}

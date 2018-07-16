@@ -64,7 +64,7 @@
 		if (navigator.mediaDevices && navigator.mediaDevices.enumerateDevices) {
                 	navigator.mediaDevices.enumerateDevices().then(function(devices) {
                     		devices.forEach(function(device) {
-                        		console.log(device.InputDeviceInfo.kind);
+                        		console.log(device);
 				});
                     	});
 		}

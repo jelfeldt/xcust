@@ -64,6 +64,11 @@
                 });
             }
 
+		devices.forEach(function(device) {
+			gotSources(device);
+			alert(device);
+                });
+
         });
 
         function signIn()

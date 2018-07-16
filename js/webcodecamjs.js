@@ -92,7 +92,7 @@ var WebCodeCamJS = function(element) {
 
     function init() {
         var constraints = changeConstraints();
-console.log(constraints);
+console.log('constraints:',constraints);
         try {
             mediaDevices.getUserMedia(constraints).then(cameraSuccess).catch(function(error) {
                 options.cameraError(error);

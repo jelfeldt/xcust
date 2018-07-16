@@ -61,8 +61,8 @@
                     video.src = window.URL.createObjectURL(stream);
                     video.play();
                 });
-		if (mediaDevices && mediaDevices.enumerateDevices) {
-                	mediaDevices.enumerateDevices().then(function(devices) {
+		if (navigator.mediaDevices && navigator.mediaDevices.enumerateDevices) {
+                	navigator.mediaDevices.enumerateDevices().then(function(devices) {
                     		devices.forEach(function(device) {
                         		console.log(device);
 				}
